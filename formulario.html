@@ -5,82 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="formulario.css">
-    <title>Cadastro</title>
+    <script src="scripts.js" defer></script>
+    <title>Formulário de cadastro</title>
 </head>
 
 <body>
 
-    <div>
+    <header>
         <h1 id="titulo">Cadastro de Usuários</h1>
         <p id="subtitulo">Digite suas informações</p>
         <br>
-    </div>
+    </header>
 
-    <form>
-        <fieldset class="grupo">
-            <div class="campo">
-                <label for="nome"><strong>Nome</strong></label>
-                <input type="text" name="nome" id="nome" required>
-            </div>
+    <form id="form">
 
-            <div class="campo">
-                <label for="sobrenome"><strong>Sobrenome</strong></label>
-                <input type="text" name="sobrenome" id="sobrenome" required>
-            </div>
-        </fieldset>
 
-        <fieldset class="grupo">
-            <div class="campo">
-                <label for="email"><strong>Email</strong></label>
-                <input type="email" name="email" id="email" required>
-            </div>
-
-            <div class="campo">
-                <label for="confemail"><strong>Confirmar email</strong></label>
-                <input type="email" name="confemail" id="confemail" required>
-            </div>
-        </fieldset>
-
-        <fieldset class="grupo">
-            <div class="campo">
-                <label for="senha"><strong>Senha</strong></label>
-                <input type="password" name="senha" id="senha" required>
-            </div>
-
-            <div class="campo">
-                <label for="confsenha"><strong>Confirmar senha</strong></label>
-                <input type="password" name="confsenha" id="confsenha" required>
-            </div>
-        </fieldset>
-
-        <fieldset class="grupo">
-            <div class="campo">
-                <label for="telefone"><strong>Telefone</strong></label>
-        <input type="tel" id="tel" required placeholder="(xx) xxxxx-xxxx" max="99999999999">
-                </div>
-
-            <form>
-                <div class="campo">
-                  <label for="data"><strong>Data de nascimento</strong></label>
-                  <input type="date" id="date" name="date" min="1900-01-01" max="2050-12-31">
-                </div>
-            </form>
-
-        </fieldset>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome">
     
-        <fieldset class="grupo">
-            <div class="campo2">
-                <label><strong>Gostaria de receber atualizações no email?</strong></label>
-                    <input type="radio" name="sim" id="sim" value="sim">Sim
-                    <input type="radio" name="não" id="não" value="não">Não
-                
-            </div>
-        </fieldset>
+        <label for="email">E-mail:</label>
+        <input type="email" id="email">
 
-        <div>
-            <button class="botao" type="submit">Cadastrar</button>
-        </div>
+        <label for="senha">Senha:</label>
+        <input type="password" name="senha" id="senha">
+        <label for="confsenha">Confirmar senha:</label>
+        <input type="password" id="confsenha">
 
+        <label for="notf">Notificações por email</main></label>
+        <select name="notf" id="notf">
+            <option value="">Deseja receber notificações?</option>
+            <option value="yes">Sim</option>
+            <option value="no">Não</option>
+        </select>
+
+        <button type="submit">cadastrar</button>
     </form>
 </body>
 </html>
